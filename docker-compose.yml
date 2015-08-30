@@ -1,0 +1,16 @@
+redis:
+  image: createdigitalspb/redis3:1.0-1-ga19d314
+
+
+web:
+  build: .
+  expose:
+   - "8000"
+  links:
+   - redis:redis
+  volumes:
+    - ./src:/project/src
+  env_file:
+   - ./docker/private/development/slack.env
+  environment:
+   - RUN_DEV=True

@@ -1,0 +1,11 @@
+slacker==0.7.0
+
+# aiohttp==0.17.3
+# use the latest version of aiohttp with my patch
+-e git+https://github.com/KeepSafe/aiohttp.git#egg=aiohttp
+
+ipython==3.1.0
+ipdb==0.8
+parse==1.6.6
+parsedatetime==1.5
+humanize==0.5.1
